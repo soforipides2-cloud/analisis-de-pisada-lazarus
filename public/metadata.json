@@ -1,0 +1,7 @@
+{
+  "name": "Análisis de Pisada - Proyecto Lazarus",
+  "description": "Una aplicación web para realizar un análisis orientativo de pisada utilizando imágenes capturadas por el usuario. La aplicación guía al usuario a través de un proceso de varios pasos para recopilar datos personales e imágenes de los pies, y luego genera un informe detallado con un resumen ejecutivo impulsado por IA.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instructivo - Análisis de Pisada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                DEFAULT: '#6B21A8',
+                800: '#6B21A8',
+                900: '#5B218A'
+              },
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        body { scroll-behavior: smooth; }
+        .instruction-card {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        .instruction-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .instruction-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+        .instruction-card p, .instruction-card li {
+            color: #374151;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <header class="text-center mb-10">
+            <img src="/images/logo.png" alt="Logo del Negocio" class="mx-auto h-16 mb-4" />
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Guía Detallada para el Análisis</h1>
+            <p class="text-gray-600 mt-2">Sigue estos pasos para asegurar la máxima precisión en tu reporte.</p>
+        </header>
+
+        <main>
+            <div class="instruction-card">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-primary-800 mb-4">Preparación Inicial</h2>
+                    <p class="mb-4">Una buena preparación es clave. Asegúrate de tener lo siguiente antes de empezar:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Un smartphone con buena cámara.</li>
+                        <li>Un área bien iluminada, sin sombras directas sobre tus pies.</li>
+                        <li>Una hoja de papel oscura o cartón para la foto de la planta del pie.</li>
+                        <li>Tus zapatos de uso más frecuente para la foto de desgaste de suela.</li>
+                        <li>Alguien que te ayude a tomar las fotos de lado y por detrás para mayor estabilidad.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Paso 1: Foto Plantar -->
+            <div class="instruction-card">
+                <img src="/images/inst-plantar-photo.png" alt="Ejemplo de foto plantar correcta">
+                <div class="p-6">
+                    <h3>Paso 1: Fotografía de la Vista Plantar (La más importante)</h3>
+                    <p class="mb-3">Esta foto nos permite ver cómo distribuyes la presión. La clave es el contraste.</p>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>Humedece ligeramente la planta de tu pie.</li>
+                        <li>Pisa con firmeza sobre la superficie oscura (cartón, papel oscuro).</li>
+                        <li>Levanta el pie. Verás tu huella marcada en la superficie.</li>
+                        <li>Toma una fotografía directamente desde arriba, asegurándote de que toda la huella esté en el cuadro y no haya sombras.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Paso 2: Vista Medial y Posterior -->
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="instruction-card !mb-0">
+                    <img src="/images/inst-medial-photo.png" alt="Ejemplo de foto de vista medial">
+                    <div class="p-6">
+                        <h3 class="text-xl">Paso 2: Vista Medial</h3>
+                        <p>Párate de forma natural y relajada. Pide a alguien que tome una foto del lado interno de tu pie, a la altura del tobillo.</p>
+                    </div>
+                </div>
+                <div class="instruction-card !mb-0">
+                    <img src="/images/inst-posterior-photo.png" alt="Ejemplo de foto de vista posterior">
+                    <div class="p-6">
+                        <h3 class="text-xl">Paso 3: Vista Posterior</h3>
+                        <p>Mantén la misma postura. Pide que te tomen una foto directamente desde atrás, centrada en tus talones y a la altura del tobillo.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Paso 3: Herramientas Interactivas -->
+            <div class="instruction-card">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-primary-800 mb-4">Uso de las Herramientas de Análisis</h2>
+                    <p class="mb-6">Una vez subidas las fotos, usarás herramientas sencillas para darnos medidas precisas.</p>
+                    
+                    <div class="flex items-start gap-4 mb-6">
+                        <img src="/images/inst-plantar-selection.png" alt="Ejemplo de selección de huella" class="w-1/3 rounded-lg border">
+                        <div>
+                            <h3 class="!mt-0">3.1 Selección de la Huella</h3>
+                            <p>En la foto plantar, haz clic y arrastra el cursor para dibujar un recuadro que contenga <strong>toda tu huella</strong>. Luego, ingresa la medida de tu pie en centímetros.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 mb-6">
+                        <img src="/images/inst-medial-points.png" alt="Ejemplo de marcado de puntos en vista medial" class="w-1/3 rounded-lg border">
+                        <div>
+                            <h3>3.2 Triángulo del Arco (Vista Medial)</h3>
+                            <p>Se te pedirá hacer clic en 3 puntos clave: el talón, la base del dedo gordo y el hueso más saliente del empeine (navicular). ¡Sigue las instrucciones en pantalla!</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start gap-4">
+                        <img src="/images/inst-posterior-lines.png" alt="Ejemplo de dibujo de líneas en vista posterior" class="w-1/3 rounded-lg border">
+                        <div>
+                            <h3>3.3 Alineación del Talón (Vista Posterior)</h3>
+                            <p>Dibujarás dos líneas haciendo dos clics para cada una: una siguiendo el centro de tu pantorrilla y otra siguiendo el centro de tu talón. Esto mide su alineación.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 4: Desgaste del Calzado -->
+            <div class="instruction-card">
+                <img src="/images/inst-shoewear-photo.png" alt="Ejemplo de foto del desgaste del calzado">
+                <div class="p-6">
+                    <h3>Paso 4: Fotografía del Desgaste del Calzado</h3>
+                    <p>Toma una foto clara y bien iluminada de las suelas de tu par de zapatos más usados. Esto nos da información invaluable sobre tu forma de caminar.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <p class="text-gray-700 mb-4">¡Listo! Con esta información, podremos generar un análisis mucho más preciso.</p>
+                <a href="./index.html" class="inline-block px-8 py-3 font-semibold text-white bg-primary-800 rounded-lg shadow-md hover:bg-primary-900 transition-colors">
+                    Volver al Análisis
+                </a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

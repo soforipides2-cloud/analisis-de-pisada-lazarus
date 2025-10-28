@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Agrega estilos base para una mejor consistencia entre navegadores */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos para el área de carga de imágenes, haciendo claro que es un elemento interactivo */
+.image-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border: 2px dashed #d1d5db; /* gray-300 */
+  border-radius: 0.5rem; /* rounded-lg */
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.image-upload:hover {
+  background-color: #f9fafb; /* gray-50 */
+  border-color: #6B21A8; /* primary-800 */
+}
+
+/* Sistema de alertas tipo semáforo */
+.traffic-light-indicator {
+  display: inline-block;
+  width: 0.875rem;
+  height: 0.875rem;
+  border-radius: 9999px;
+  border: 2px solid white;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+  margin-right: 0.5rem;
+}
+
+.traffic-light-green { background-color: #22c55e; }
+.traffic-light-yellow { background-color: #f59e0b; }
+.traffic-light-red { background-color: #ef4444; }
+
+/* Forzar saltos de página en la impresión del PDF */
+@media print {
+  .pdf-page-break {
+    page-break-before: always;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
